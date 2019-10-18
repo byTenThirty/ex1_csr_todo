@@ -4,15 +4,13 @@ import './App.css';
 import Home from './routes/Home';
 import Detail from './routes/Detail';
 
-function App() {
-  return (
+const App = () => (
     <BrowserRouter>
-      <Switch>
-        <Route path="/" exact component={Home} />
-        <Route path="/todo/:id" component={Detail} />
-      </Switch>
+        <Switch>
+            <Route path="/" exact component={Home} />
+            <Route path="/todo/:id" component={Detail} />
+        </Switch>
     </BrowserRouter>
-  );
-}
+);
 
 export default App;
