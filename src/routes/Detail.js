@@ -17,7 +17,12 @@ const Detail = () => {
 		<>
 			{todo && (
 				<div>
-					<h2>{`${todo.id}. ${todo.title}`}</h2>
+					<div className="list-title">
+						<h3>CSR 리스트</h3>
+					</div>
+					<div className="detail-content">
+						<h2>{`${todo.id}. ${todo.title}`}</h2>
+					</div>
 				</div>
 			)}
 		</>

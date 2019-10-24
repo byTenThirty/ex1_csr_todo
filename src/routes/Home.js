@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
+import '../App.css';
 
 const Home = () => {
 	const [todos, setTodos] = useState([]);
@@ -13,9 +14,21 @@ const Home = () => {
 	}, []);
 
 	return (
-		<ul>
-			{todos.map(todo => <li key={todo.id}><Link to={`/todo/${todo.id}`}>{todo.title}</Link></li>)}
-		</ul>
+		<div className="App">
+			<div className="list-title">
+				<h3>CSR 리스트</h3>
+			</div>
+			<ul>
+				{todos.map(todo =>
+					<Link to={`/todo/${todo.id}`}>
+						 <li key={todo.id} className="list-li">
+							 {todo.title}
+							<span className="li-span">></span>
+						 </li>
+					</Link>
+				)}
+			</ul>
+		</div>
 	);
 };
 
