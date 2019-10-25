@@ -4,7 +4,7 @@ import axios from 'axios';
 
 const Detail = () => {
 	const { id } = useParams();
-	const [todo, setTodo] = useState();
+	const [todo, setTodo] = useState(null);
 
 	useEffect(() => {
 		axios.get(`https://jsonplaceholder.typicode.com/todos/${id}`)
@@ -22,6 +22,8 @@ const Detail = () => {
 					</div>
 					<div className="detail-content">
 						<h2>{`${todo.id}. ${todo.title}`}</h2>
+						<p>User id : {todo.userId}</p>
+						<p>Completed : {todo.completed.toString()}</p>
 					</div>
 				</div>
 			)}
