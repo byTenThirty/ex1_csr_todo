@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
 import axios from 'axios';
 import '../App.css';
 import Paper from '@material-ui/core/Paper';
@@ -24,7 +23,7 @@ const Home = () => {
 	const handleChangePage = (event, newPage) => {
 		setPage(newPage);
 	};
-	
+
 
 	return (
 		<div className="App">
@@ -36,7 +35,7 @@ const Home = () => {
 						<Table stickyHeader aria-label="sticky table">
 						<TableHead>
 							<TableRow>
-							
+
 								<TableCell align="center">
 									ID
 								</TableCell>
@@ -46,7 +45,7 @@ const Home = () => {
 								<TableCell align="center">
 									본문
 								</TableCell>
-							
+
 							</TableRow>
 						</TableHead>
 						<TableBody>
@@ -64,7 +63,7 @@ const Home = () => {
 										</TableCell>
 									</TableRow>
 								);
-							})}	
+							})}
 						</TableBody>
 					</Table>
 				</div>
